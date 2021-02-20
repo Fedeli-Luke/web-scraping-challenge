@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <meta name="description" content="mars">
+  <title>Mission To Mars</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <style>
+  
+  </style>
+
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="jumbotron text-center">
+      <h1>Mission to Mars</h1>
+      <p><a class="btn btn-primary btn-lg" href="/scrape" role="button">Scraped New Data</a></p>
+    </div>
+
+    <!-- News -->
+    <div class="row" id="latest_mars_news">
+      <div class="col-md-12">
+        <h2 class="heading">Latest Mars News</h2>
+          <h4 class="heading">{{mars_web.news_title}}</h4>
+        <small></small>
+        <p>{{mars_web.news_p}}</p>
+      </div>
+    </div>
+    <div class="row" id="image_weather_info">
+      
+      <!-- Image -->
+      <div class="col-md-8" style="margin-right: 0; margin-left: 0">
+        <h2 class="heading">Featured Mars Image</h2>
+        <img src={{mars_web.featured_image_url}} alt="featured-image" width = 100%>
+      </div>
+
+      <div class="col-md-4" style="margin-left: 0; margin-right: 0">
+        
+        <!-- Mars Facts Table -->
+        <div class="row" id="box" style="padding: 16px">
+          <h2 class="heading">Mars Facts</h2>
+          <a class="box" href="mars_fact.html"></a>
+          <p style="width: 100%;">{{mars_web.facts_table}}</p>
+      </div>
+    </div>
+
+  </div>  
+  <!-- Mars Hemisphere Data -->
+  <div class='container'>
+    <div class='card'>
+        <h4 class="card-header text-center">
+            Mars Hemispheres
+        </h4>
+    
+          <div class='card-body'>
+              <div class="container">
+                 <div class="row">
+                     <div class="col-6">
+                         <div class="card p-3">
+                             <img class="card-img-top" src='https://astrogeology.usgs.gov/cache/images/f5e372a36edfa389625da6d0cc25d905_cerberus_enhanced.tif_full.jpg'>
+                             <h5 class='card-text'>Cerberus Hemisphere Enhanced</h5>
+                         </div>
+                     </div>
+
+                     <div class="col-6">
+                         <div class="card p-3">
+                             <img class="card-img-top" src='https://astrogeology.usgs.gov/cache/images/3778f7b43bbbc89d6e3cfabb3613ba93_schiaparelli_enhanced.tif_full.jpg'>
+                             <h5 class='card-text'>Schiaparelli Hemisphere Enhanced</h5>
+                         </div>
+                     </div>
+                 </div>
+
+                 <div class="row">
+                     <div class="col-6">
+                         <div class="card p-3">
+                             <img class="card-img-top" src='https://astrogeology.usgs.gov/cache/images/555e6403a6ddd7ba16ddb0e471cadcf7_syrtis_major_enhanced.tif_full.jpg'>
+                             <h5 class='card-text'>Syrtis Major Hemisphere Enhanced</h5>
+                         </div>
+                     </div>
+
+                     <div class="col-6">
+                         <div class="card p-3">
+                             <img class="card-img-top" src='https://astrogeology.usgs.gov/cache/images/b3c7c6c9138f57b4756be9b9c43e3a48_valles_marineris_enhanced.tif_full.jpg'>
+                             <h5 class='card-text'>Valles Marineris Hemisphere Enhanced</h5>
+                         </div>
+                     </div>
+                 </div>
+              </div>
+          </div>
+      </div>
+  </div>
+</body>
+
+</html>
